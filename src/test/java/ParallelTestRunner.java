@@ -14,7 +14,7 @@ public class ParallelTestRunner {
 
     @Test
     void testParallel() {
-        Results results = Runner.path("classpath:public-soap-api-examples").tags("~@ignore").parallel(5);
+        Results results = Runner.path("classpath:public-soap-api-examples").tags("~@ignore").parallel(2);
         generateReport(results.getReportDir());
         assertEquals(0, results.getFailCount(), results.getErrorMessages());
 
